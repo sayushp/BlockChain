@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+.head{
+	background:#060 repeat-x;
+	width:100%;
+	height:200px;
+}
+body{
+	min-height:1000px;
+	background:#999;
+}
+div.toggler				{ border:1px solid #ccc; background:url(gmail2.jpg) 10px 12px #eee no-repeat; cursor:pointer; padding:10px 32px; }
+div.toggler .subject	{ font-weight:bold; }
+div.read					{ color:#666; }
+div.toggler .from, div.toggler .date { font-style:italic; font-size:11px; }
+div.body					{ padding:10px 20px; }
+.floater {
+background: url(images/floatingbg.png) repeat-y;
+width: 67px;
+height:auto;
+position: absolute;
+top: 250px;
+left: 0px;
+position: fixed;
+-webkit-border-top-right-radius: 10px;
+-webkit-border-bottom-right-radius: 10px;
+-moz-border-radius-topright: 10px;
+-moz-border-radius-bottomright: 10px;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+z-index: 10;
+}
+.soc {
+margin-left: 8px;
+margin-bottom: 5px;
+}
+.facebook {
+background: url(images/facebook.png) no-repeat;
+width: 48px;
+height: 48px;
+margin-top: 5px;
+}
+.twitter {
+background: url(images/twitter.png) no-repeat;
+width: 48px;
+height: 48px;
+}
+.linkedin {
+background: url(images/linkedin-icon.png) no-repeat;
+width: 48px;
+height: 48px;
+}
+#get-a-freequote {
+background:url(images/3RDEY.png) left no-repeat;
+height: 91px;
+width: 70px;
+position: absolute;
+right: 17px;
+top: 500px;
+z-index: 200;
+}

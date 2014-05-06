@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function()
+  {
+  $("#clic").click(function(){
+    $("#p1").css("color","grey").slideUp(2000).slideDown(2000);
+  });
+});
+</script>
+<script language="javascript">
+var k=jQuery(window).height();
+k=k-150;
+jQuery('#get-a-freequote').css('top',k+'px');
+</script>
+<script language="javascript">
+	var name = "#get-a-freequote";
+	var menuYloc = null;
+	
+		jQuery(document).ready(function(){
+			menuYloc = parseInt(jQuery(name).css("top").substring(0,jQuery(name).css("top").indexOf("px")))
+			jQuery(window).scroll(function () { 
+				offset = menuYloc+jQuery(document).scrollTop()+"px";
+				jQuery(name).animate({top:offset},{duration:800,queue:false});
+			});
+		}); 
+	 </script>
+     <script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+}
+xmlhttp.open("GET","demo_get.asp",true);
+xmlhttp.send();
+}
+</script>
+<link href="mystyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="floater">
+<p style="font-size: 12px;
+margin-left: 8px;
+margin-top: 7px;">FOLLOW</p>
+<a href="https://www.facebook.com/alwahdamall" target="_new"><div class="facebook soc"></div></a>
+<a href="https://twitter.com/alwahdamall" target="_new"><div class="twitter soc"></div></a>
+<a href="http://www.youtube.com/user/AlwahdaMallAbuDhabi" target="_new"><div class="linkedin soc"></div></a>
+</div>
+<div id="get-a-freequote"></div>
+<p id="p1">jQuery is fun!!</p>
+<button id="clic">Click me</button>
+<h2>AJAX</h2>
+<button type="button" onclick="loadXMLDoc()">Request data</button>
+<div id="myDiv"></div>
+
+</body>
+</html>
